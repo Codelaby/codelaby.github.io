@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <base href="mainpage/" >
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    <!-- HTML Meta Tags -->
+    <title>Codelaby & Portfolio</title>
+    <meta name="description" content="Personal Portfolio website of Codelaby. A mobile dev designer." >
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://codelaby.netlify.app" >
+    <meta property="og:type" content="website" >
+    <meta property="og:title" content="Codelaby & Portfolio" >
+    <meta property="og:description" content="Personal Portfolio website of Codelaby. A mobile dev designer." >
+    <meta property="og:image" content="img/web-preview.png" >
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta property="twitter:domain" content="https://codelaby.netlify.app" >
+    <meta property="twitter:url" content="https://codelaby.netlify.app" >
+    <meta name="twitter:title" content="Codelaby & Portfolio" >
+    <meta name="twitter:description" content="Personal Portfolio website of Codelaby. A mobile dev designer." >
+    <meta name="twitter:image" content="img/web-preview.png" >
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <!-- FAVICON -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/general.css" >
+    <link rel="stylesheet" href="css/styles.css" >
+    <link rel="stylesheet" href="css/queries.css" >
+
+    <!-- JavaScript -->
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <header class="section-header">
+        <nav class="nav flex-row">
+            <a href="index" class="logo-link"><img src="img/codelaby-logo.png" alt="Codelaby Logo" class="logo" /></a>
+            <div class="nav-menu">
+                <ul class="nav-list">
+
+
+                    <li>
+                        <a href="#about" class="link main-nav-link">About <span>&nbsp;&frasl;&gt;</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#skills" class="link main-nav-link">Skills <span>&nbsp;&frasl;&gt;</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#works" class="link main-nav-link">Work <span>&nbsp;&frasl;&gt;</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="link main-nav-link">Contact <span>&nbsp;&frasl;&gt;</span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="nav-toggle">
+                <ion-icon name="menu-outline" class="nav-icon"></ion-icon>
+                <ion-icon name="close-outline" class="nav-icon"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <main>
+        <section class="section-home flex-row-center" id="section-home">
+            <div class="container">
+                <div class="side-social-links--left">
+                    <ul class="social-links social-links--side">
+
+                        <li>
+                            <a href="https://twitter.com/Codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-twitter"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-linkedin"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-github"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://stackoverflow.com/users/3464919/codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-stackoverflow"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://discord.com/invite/mouredev" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-discord"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCOSHwP_fmkjoqdsXJLH6xHg" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-youtube"></ion-icon></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div class="side-social-links--rigth">
+                    <ul class="social-links social-links--side">
+                        <li>
+                            <a href="mailto:mycodelaby@gmail.com" class="link social-link">mycodelaby@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container-md">
+                    <div class="hero slide-left">
+                        <div class="hero-text-box flex-col">
+                            <div class="hero-main-title-box">
+                                <p class="enter-text">Bienvenido a</p>
+                                <h1 class="heading-primary">Codelaby</h1>
+                                <p class="hero-subheading">
+                                    <span class="animate-subheading"></span>
+                                    Spain
+                                </p>
+                            </div>
+
+                            <div class="description-box slide-left">
+                                <p class="description">
+                                <p>Soy un programador fullstack con experiencia en desarrollo de aplicaciones para Android utilizando código nativo Kotlin.<br><br>Mi objetivo es proporcionar soluciones robustas y de gran utilidad a mis usuarios.</p>
+                                </p>
+
+                                <a href="#works" class="link btn btn-outline" target="_blank">¡Descubrelas ya!</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section-about" id="about">
+            <div class="container">
+                <div class="container-md">
+                    <div class="heading-secondary--left">
+                        <h2 class="heading-secondary">
+                            Acerca de mí <span>&nbsp;&frasl;&gt;</span>
+                        </h2>
+                    </div>
+                    <div class="about-box">
+                        <div class="about-box--text">
+                            <div class="flex-col about-me-text text">
+                                <p>
+                                <p>Soy un programador fullstack con experiencia en desarrollo de aplicaciones para Android utilizando código nativo Kotlin. Mi objetivo es proporcionar soluciones robustas y de gran utilidad a mis usuarios.</p>
+
+<p>Con más de 30 años de experiencia en el desarrollo general, he estado involucrado en una variedad de proyectos y tecnologías. Durante los primeros años de mi carrera, pasé varios años creando sitios web en el año 2000. En los últimos 5 años, me he especializado en el desarrollo de aplicaciones para Android utilizando Kotlin, Java, HTML5, CSS3, Javascript y otros lenguajes de programación.</p>
+
+<p>Además, también tengo experiencia en PHP y MySQL, lo que me permite ofrecer soluciones completas para mis usuarios. Siempre estoy buscando aprender nuevos lenguajes y tecnologías para adaptarme a las necesidades y tendencias del mercado. Mi experiencia y habilidades me permiten entender las necesidades de los usuarios y ofrecer soluciones innovadoras para alcanzar sus objetivos.</p>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="about-box--img">
+                            <img src="img/codelaby-logo.png" alt="Photo of Codelaby" class="about-img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section-skills padd-section" id="skills">
+            <div class="container">
+                <div class="container-md">
+                    <div class="heading-secondary--right">
+                        <h2 class="heading-secondary">
+                            <span> &lt;&frasl;&nbsp;</span>Mis habilidades 
+                        </h2>
+                    </div>
+                    <div class="fullstack-skills">
+
+
+                        <div class="skills-group">
+                            <p class="skills-title">Frontend</p>
+                            <div class="skills-data-box">
+                                <ul class="skills-data-list">
+        
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>HTML</p>
+                                    </li>
+        
+    
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>CSS</p>
+                                    </li>
+        
+    
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>Javascript</p>
+                                    </li>
+        
+    
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>Kotlin</p>
+                                    </li>
+        
+    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="skills-group">
+                            <p class="skills-title">Backend</p>
+                            <div class="skills-data-box">
+                                <ul class="skills-data-list">
+        
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>PHP</p>
+                                    </li>
+        
+    
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>Kotlin</p>
+                                    </li>
+        
+    
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>Python</p>
+                                    </li>
+        
+    
+                                    <li class="skills-name">
+                                        <ion-icon class="skills-icon" name="checkmark-circle-outline"></ion-icon>
+                                        <p>MySQL</p>
+                                    </li>
+        
+    
+                                </ul>
+                            </div>
+                        </div>
+ 
+
+                    </div>
+
+                    <!-- Other skills -->
+                    <div class="flex-col other-skills-box">
+                        <p class="skills-title">Other skills</p>
+                        <ul class="flex-col other-skills-list text">
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Extración de datos con Web Scraping</p>
+                            </li>
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Administración y creación de bases de datos SQL</p>
+                            </li>
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Normalización de datos, optimización de consultas</p>
+                            </li>
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Capacidades básicas de Data Scientist y Data Analyst</p>
+                            </li>
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Principios de diseño de interficies de usuario y experiencia de uso</p>
+                            </li>
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Fundamentos del diseño y color</p>
+                            </li>
+
+                            <li class="other-skills-item">
+                                <ion-icon class="other-skills-icon" name="chevron-forward-outline"></ion-icon>
+                                <p>Habilidades de diseño con Figma</p>
+                            </li>
+ 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECENT WORKS -->
+        <section class="section-works padd-section" id="works">
+            <div class="container">
+                <div class="container-md">
+                    <div class="heading-secondary--left">
+                        <h2 class="heading-secondary">
+                            Trabajos recientes <span>&nbsp;&frasl;&gt;</span>
+                        </h2>
+                    </div>
+                    <div class="works-container">
+
+                        <div class="work">
+                            <img src="img/projects/precio_luz_app.webp" alt="Precio de la luz" class="work-img" />
+                            <div class="work-text-container text">
+                                <p class="work-title">Precio de la luz</p>
+                                <p class="work-description">
+                                    Un proyecto aplicación móvil para Android, para obtener el precio de la luz en España en tiempo real, soporte de modo oscuro.
+                                </p>
+                                <ul class="work-tags-list">
+    
+                                    <li class="work-tag-item">Kotlin</li>
+    
+                                    <li class="work-tag-item">Android View</li>
+    
+                                    <li class="work-tag-item">PHP Slim</li>
+    
+                                    <li class="work-tag-item">MySQL</li>
+    
+                                </ul>
+                            </div>
+                            <div class="work-links">
+                                <ul class="work-links-list">
+
+                                    <li class="work-links-item">
+                                        <a href="https://play.google.com/store/apps/details?id=com.webserveis.app.lightprice" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>    
+
+                        <div class="work">
+                            <img src="img/projects/event_date_generator.webp" alt="Date Event Generator" class="work-img" />
+                            <div class="work-text-container text">
+                                <p class="work-title">Date Event Generator</p>
+                                <p class="work-description">
+                                    Un proyecto web, para generar horarios de un evento en directo, teniendo en cuenta la zona horaria de la audiencia, soporte de modo oscuro.
+                                </p>
+                                <ul class="work-tags-list">
+    
+                                    <li class="work-tag-item">HTML</li>
+    
+                                    <li class="work-tag-item">CSS</li>
+    
+                                    <li class="work-tag-item">Javascript</li>
+    
+                                    <li class="work-tag-item">PHP</li>
+    
+                                </ul>
+                            </div>
+                            <div class="work-links">
+                                <ul class="work-links-list">
+
+                                    <li class="work-links-item">
+                                        <a href="https://codelaby.es/eventdate/" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>    
+
+                        <div class="work">
+                            <img src="img/projects/whatsapp_telegram_app.webp" alt="Envia Whats Telegram todo en 1" class="work-img" />
+                            <div class="work-text-container text">
+                                <p class="work-title">Envia Whats Telegram todo en 1</p>
+                                <p class="work-description">
+                                    Un proyecto aplicación móvil, para poder enviar mensajes a tus contactos de whatsapp o telegram des de un mismo lugar, soporte de modo oscuro.
+                                </p>
+                                <ul class="work-tags-list">
+    
+                                    <li class="work-tag-item">Kotlin</li>
+    
+                                    <li class="work-tag-item">Android View</li>
+    
+                                </ul>
+                            </div>
+                            <div class="work-links">
+                                <ul class="work-links-list">
+
+                                    <li class="work-links-item">
+                                        <a href="https://play.google.com/store/apps/details?id=com.webserveis.app.dm" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>    
+
+                        <div class="work">
+                            <img src="img/projects/shop_api_rest.webp" alt="API REST tienda de productos" class="work-img" />
+                            <div class="work-text-container text">
+                                <p class="work-title">API REST tienda de productos</p>
+                                <p class="work-description">
+                                    Un proyecto API REST, para consultar y filtrar productos con sus elances de tienda externa.
+                                </p>
+                                <ul class="work-tags-list">
+    
+                                    <li class="work-tag-item">PHP Slim</li>
+    
+                                    <li class="work-tag-item">MySQL</li>
+    
+                                </ul>
+                            </div>
+                            <div class="work-links">
+                                <ul class="work-links-list">
+
+                                    <li class="work-links-item">
+                                        <a href="https://github.com/webserveis/devstore" class="link work-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                                    </li>
+
+                                    <li class="work-links-item">
+                                        <a href="https://codelaby.es/devstore/public/v1/products" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>    
+
+                    </div>
+                    <div class="see-more-btn-box">
+                        <a href="https://play.google.com/store/apps/dev?id=8979891956711794454" class="link btn btn-outline" target="_blank">Ver mucho más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section-contact" id="contact">
+            <div class="container">
+                <div class="container-md">
+                    <div class="contact-container">
+                        <h2 class="heading-secondary">
+                            <span>&lt;&frasl;&nbsp;</span> Contáctame
+                        </h2>
+                        <div class="contact-info-container">
+                            <p class="contact-title">Codelaby en la red</p>
+                            <p class="text">
+                                ¡Me puedes encontrar y seguir en varias plataformas en línea! Mi nombre de usuario en las redes es @codelaby, donde comparto actualizaciones sobre mis proyectos y consejos y trucos para el desarrollo de aplicaciones para Android.    
+                            </p>
+                        </div>
+                        <a href="https://dev4phones.wordpress.com/" class="link btn btn-full">Ver mi blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section-footer">
+        <div class="container">
+            <div class="container-md">
+                <div class="container-social-links">
+                    <ul class="social-links">
+
+                        <li>
+                            <a href="https://twitter.com/Codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-twitter"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-linkedin"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-github"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://stackoverflow.com/users/3464919/codelaby" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-stackoverflow"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://discord.com/invite/mouredev" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-discord"></ion-icon></a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCOSHwP_fmkjoqdsXJLH6xHg" class="social-link" target="_blank"><ion-icon class="link social-icon" name="logo-youtube"></ion-icon></a>
+                        </li>
+  
+                    </ul>
+                </div>
+                <p class="copyright">
+                    Designed & Built by Codelaby &copy;
+                    <span class="year"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- ANIMATED TEXT -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/typedText.js" type="module"></script>
+</body>
+
+</html>
