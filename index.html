@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="css/general.css" >
     <link rel="stylesheet" href="css/styles.css" >
     <link rel="stylesheet" href="css/queries.css" >
+    <link rel="stylesheet" href="css/cookie_consent.css" >
 
     <!-- JavaScript -->
     <script src="js/index.js" defer></script>
@@ -375,23 +376,21 @@
                         </div>    
 
                         <div class="work">
-                            <a href="https://codelaby.es/eventdate/" target="_blank">
-                                <img src="img/projects/event_date_generator.webp" alt="Date Event Generator" class="work-img" />
+                            <a href="https://apps.apple.com/us/app/time-kit/id6477182932" target="_blank">
+                                <img src="img/projects/timekit_app.png" alt="Time Kit" class="work-img" />
                             </a>
                             <div class="work-text-container text">
-                                <p class="work-title">Date Event Generator</p>
+                                <p class="work-title">Time Kit</p>
                                 <p class="work-description">
-                                    Un proyecto web, para generar horarios de un evento en directo, teniendo en cuenta la zona horaria de la audiencia, soporte de modo oscuro.
+                                    Time Kit es una aplicación que te permite convertir los horarios de tus eventos streaming a las zonas horarias de tu audiencia. Así, todos podrán verlos en su franja horaria.
                                 </p>
                                 <ul class="work-tags-list">
     
-                                    <li class="work-tag-item">HTML</li>
+                                    <li class="work-tag-item">Swift</li>
     
-                                    <li class="work-tag-item">CSS</li>
+                                    <li class="work-tag-item">SwiftUI</li>
     
-                                    <li class="work-tag-item">Javascript</li>
-    
-                                    <li class="work-tag-item">PHP</li>
+                                    <li class="work-tag-item">SwifData</li>
     
                                 </ul>
                             </div>
@@ -399,7 +398,7 @@
                                 <ul class="work-links-list">
 
                                     <li class="work-links-item">
-                                        <a href="https://codelaby.es/eventdate/" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                                        <a href="https://apps.apple.com/us/app/time-kit/id6477182932" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                                     </li>
                                 </ul>
                             </div>
@@ -427,37 +426,6 @@
 
                                     <li class="work-links-item">
                                         <a href="https://play.google.com/store/apps/details?id=com.webserveis.app.dm" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>    
-
-                        <div class="work">
-                            <a href="https://codelaby.es/devstore/public/v1/products" target="_blank">
-                                <img src="img/projects/shop_api_rest.webp" alt="API REST tienda de productos" class="work-img" />
-                            </a>
-                            <div class="work-text-container text">
-                                <p class="work-title">API REST tienda de productos</p>
-                                <p class="work-description">
-                                    Un proyecto API REST, para consultar y filtrar productos con sus elances de tienda externa.
-                                </p>
-                                <ul class="work-tags-list">
-    
-                                    <li class="work-tag-item">PHP Slim</li>
-    
-                                    <li class="work-tag-item">MySQL</li>
-    
-                                </ul>
-                            </div>
-                            <div class="work-links">
-                                <ul class="work-links-list">
-
-                                    <li class="work-links-item">
-                                        <a href="https://github.com/webserveis/devstore" class="link work-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-                                    </li>
-
-                                    <li class="work-links-item">
-                                        <a href="https://codelaby.es/devstore/public/v1/products" class="link work-link" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                                     </li>
                                 </ul>
                             </div>
@@ -549,6 +517,11 @@
             </div>
         </div>
     </footer>
+    <section id="cookie-consent-popup" style="display:none">
+        <p>Este sitio web utiliza tecnologías como cookies para habilitar la funcionalidad esencial del sitio, así como para fines de análisis, personalización y publicidad dirigida. Puedes cambiar la configuración en cualquier momento, o aceptar la configuración predeterminada. Puede cerrar este banner para continuar con solo las cookies esenciales <a href="https://codelaby.github.io/eula.html" target="_blank">Política de cookies</a></p>
+        <button id="cookie-consent-decline">Declinar</button>
+        <button id="cookie-consent-accept">Aceptar</button>
+    </section>
     <!-- ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -556,6 +529,8 @@
     <!-- ANIMATED TEXT -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/typedText.js" type="module"></script>
+    <!-- COOKIE CONSENT -->
+    <script src="js/cookie_consent.js"></script>
 </body>
 
 </html>
