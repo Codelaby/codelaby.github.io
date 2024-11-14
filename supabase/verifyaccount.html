@@ -54,11 +54,11 @@ window.addEventListener('load', function() {
     switch (currentState) {
       case States.EXPIRED:
         actionResendVerifyEmail();
-        disableElementForSeconds(myButton, 5, translate('expired_resend', language));
+        disableElementForSeconds(myButton, 30, translate('expired_resend', language));
       break;
       case States.SENDED:
         actionResendVerifyEmail();
-        disableElementForSeconds(myButton, 5, translate('sended_resend', language));
+        disableElementForSeconds(myButton, 30, translate('sended_resend', language));
       break;
       case States.VERIFIED:
         actionContinue();
