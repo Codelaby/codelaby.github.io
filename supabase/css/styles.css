@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #E1EBEE;
+  }
+.debug {
+  border: 1px solid red;
+}
+
+.center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%)
+}
+
+.centered {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem; /* Equivalente a 36px en unidades rem */
+}
+
+h2 {
+  font-size: 1.5rem; /* Equivalente a 24px en unidades rem */
+}
+
+h3 {
+  font-size: 1.25rem; /* Equivalente a 20px en unidades rem */
+}
+
+p {
+  font-size: 1rem; /* Equivalente a 16px en unidades rem */
+}
+
+.small-text {
+  font-size: 0.875rem; /* Equivalente a 14px en unidades rem */
+}
+
+.text-secondary {
+  color: #6c757d; /* Ejemplo de color gris medio */
+}
+
+
+button {
+  position: relative;
+  display: inline-block;
+  width: 13em;
+  height: 3em;
+  border: none;
+  outline: none;
+  font-weight: normal;
+  background: #dfdfdf;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 2em;
+}
+button:disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(255, 255, 255, 0.38);
+}
+
+
+.rounded-button.green {
+  background-color: #4caf50; /* Color de fondo verde */
+  color: #fff; /* Color de texto blanco */
+}
+
+.rounded-button[disabled] {
+  opacity: 0.38; /* Opacidad del texto */
+  background-color: rgba(0, 0, 0, 0.12); /* Color de fondo con opacidad */
+  cursor: not-allowed; /* Cursor de no permitido */
+}
+
+
+.ripple {
+  position: absolute;
+  background: rgba(0,0,0,.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+  .ripple.show {
+    -webkit-animation: ripple .5s ease-out;
+    animation: ripple .5s ease-out;
+  }
+  @-webkit-keyframes 
+  ripple { to {
+   -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+   opacity: 0;
+  }
+  }
+  @keyframes 
+  ripple { to {
+   -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+   opacity: 0;
+  }
+  }
+
+  @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+}
+ 
+
+ @-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.load {
+	width: 32px;
+	height: 32px;
+	margin: 100px auto 0;
+	border:solid 4px #8822aa;
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	 -webkit-transition: all 0.5s ease-in;
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         1.0s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+    	
+    	 transition: all 0.5s ease-in;
+    animation-name:             rotate; 
+    animation-duration:         1.0s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear; 
+}
+
+
+.button-medium {
+    width: auto;
+    min-width: 60%;
+}
+
+.btn-blue {
+    background-color: #42a5f5;
+}
+
+.btn-green {
+    background-color: #66bb6a ;
+}
+
+.wrapper {
+}
+
+.container {
+    background-color: white;
+    border-radius: 1.2em;
+    background: rgb(235,234,255);
+    background: linear-gradient(45deg, rgba(235,234,255,1) 0%, rgba(255,255,255,1) 100%);
+
+}
+
+#head_icon {
+  width: 128px;
+  height: 128px;
+  margin-top: 2em;
+  margin-bottom: 1.2em;
+}
+  
+#footer {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1.2em;
+}
+
+#summary {
+  margin: 16pt 16pt 0pt 16pt
+}
+
+#title {
+  margin: 0pt 16pt 0pt 16pt
+}
+
+#tip {
+  margin: 0pt 16pt 8pt 16pt
+}
+
+#btn_action {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+/* Estilos para smartphone */
+
+}
+
+@media screen and (max-width: 767px) {
+/* Estilos para smartphone */
+.container {
+      width: 95%;
+      height: 95%;
+  }
+
+.button-medium {
+    width: 90%;
+}
+
+}
+
+@media screen and (min-width: 768px)  {
+/* Estilos para tablet */
+  .container {
+      width: 480pt;
+      height: 90%;
+  }
+}
+
+
+
+
