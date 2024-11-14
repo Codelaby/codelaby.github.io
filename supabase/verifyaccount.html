@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/core.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <div class="container center centered">
+    <img id="head_icon" src="img/email_verifying.png" alt="Email verification">
+
+    <h2 id="title">Account verification</h2>
+    <p id="summary">Please wait while you verify your email.</p>
+
+    <div id="progress" class="load"></div>
+    <div id="footer" class="centered">
+        <p id="tip" class="small-text text-secondary">Not to worry, we can send the link again.</p>
+        <button id="btn_action" class="button-medium btn-blue">Resend verification link</button>
+    </div>
+  </div>
+
+<script>
+
+const States = {
+  VERIFYING: 'verifying',
+  VERIFIED: 'verified',
+  EXPIRED: 'expired',
+  SENDED: 'sended',
+  ERROR: 'error'
+};
+
+let currentState = States.VERIFYING;
+let language = "en";
+
+const SUPABASE_URL = 'https://ungnvgkjfgotfefbqbwa.supabase.co/'
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVuZ252Z2tqZmdvdGZlZmJxYndhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg5MTQzNzUsImV4cCI6MjA0NDQ5MDM3NX0.d3QbJiv_jxLyNSdzmxOybAfpwf1FN6RaMUPtBx_2zCY'
+
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+window.addEventListener('load', function() {
+  var btnAction = document.getElementById('btn_action');
+
+  renderUIEstado(currentState);
+
+  btnAction.addEventListener('click', function(event) {
+    var myButton = event.target;
+    addRippleEffect(event);    
+
+    switch (currentState) {
+      case States.EXPIRED:
+        actionResendVerifyEmail();
+        disableElementForSeconds(myButton, 5, translate('expired_resend', language));
+      break;
+      case States.SENDED:
+        actionResendVerifyEmail();
+        disableElementForSeconds(myButton, 5, translate('sended_resend', language));
+      break;
+      case States.VERIFIED:
+        actionContinue();
+      break;
+        default:
+      break;
+    }
+  });
+
+    //const url = window.location.href;
+  //var url = 'https://codelaby.es/mainpage/verifyemail.php#error=unauthorized_client&error_code=401&error_description=Email+link+is+invalid+or+has+expired';
+  //var url = 'https://zfncxpxrclafzayceywa.supabase.co/auth/v1/verify#token=23f44b91109a4d60fbdeb606d7e018cfbc6da4c4134673ad77b5be1b&type=magiclink&redirect_to=https://codelaby.es/mainpage/verifyemail.php';
+
+  var url = window.location.href;
+  setTimeout(function() { processMagicLink(url); }, 2000);
+
+});
+
+function changeUIState(estado) {
+  currentState = estado;
+  renderUIEstado(currentState); 
+}
+
+function renderErrorUI(errorMsg) {
+  var iconElement = document.getElementById('head_icon');
+  var titleElement = document.getElementById('title');
+  var descriptionElement = document.getElementById('summary');
+  var tipElement = document.getElementById('tip');
+  var btnActionElement = document.getElementById('btn_action');
+  var progressElement = document.getElementById('progress');
+
+  iconElement.src = 'img/error_unexpected.png';
+
+  titleElement.textContent = translate("error_unexpected_title", language);
+  
+  var translatedSummary = translate("error_unexpected_summary", language);
+  var summaryWithErrorMessage = translatedSummary.replace("{{ error_msg }}", errorMsg);
+  descriptionElement.textContent = summaryWithErrorMessage;
+
+  tipElement.textContent = null;
+  btnActionElement.style.display = 'none';
+  progressElement.style.display = 'none';
+}
+
+
+function renderUIEstado(estado) {
+  var iconElement = document.getElementById('head_icon');
+  var titleElement = document.getElementById('title');
+  var descriptionElement = document.getElementById('summary');
+  var tipElement = document.getElementById('tip');
+  var btnActionElement = document.getElementById('btn_action');
+  var progressElement = document.getElementById('progress');
+
+  switch (estado) {
+    case States.VERIFYING:
+      iconElement.src = 'img/email_verifying.png';
+      titleElement.textContent = translate("verifing_title", language);
+      descriptionElement.textContent = translate("verifing_summary", language);
+      tipElement.textContent = null;
+      btnActionElement.style.display = 'none';
+      progressElement.style.display = 'block';
+      break;
+    case States.VERIFIED:
+      iconElement.src = 'img/account_verified.png';
+      titleElement.textContent = translate("verified_title", language);
+      descriptionElement.textContent = translate("verified_summary", language);
+      tipElement.textContent = translate("verified_tip", language);
+      btnActionElement.textContent = translate("verified_btn", language);
+      btnActionElement.style.display = 'block';
+      progressElement.style.display = 'none';
+      break;
+    case States.EXPIRED:
+      iconElement.src = 'img/email_verify_expired.png';
+      titleElement.textContent = translate("expired_title", language);
+      descriptionElement.textContent = translate("expired_summary", language);
+      tipElement.textContent = translate("expired_tip", language);
+      btnActionElement.textContent = translate("expired_btn", language);
+      btnActionElement.style.display = 'block';
+      progressElement.style.display = 'none';
+      break;
+    case States.SENDED:
+      iconElement.src = 'img/email_verfiy_sending.png';
+      titleElement.textContent = translate("sended_title", language);
+      descriptionElement.textContent = translate("sended_summary", language);
+      tipElement.textContent = translate("sended_tip", language);
+      btnActionElement.textContent = translate("sended_btn", language);
+      btnActionElement.style.display = 'block';
+      progressElement.style.display = 'none';
+      break;
+    default:
+      break;
+  }
+}
+
+
+
+function actionResendVerifyEmail() {
+  console.log("resend verify email");
+
+  changeUIState(States.SENDED);
+
+}
+
+function actionContinue() {
+  console.log("continue");
+}
+
+
+async function isAccountVerified(access_token, refresh_token) {
+
+  if (access_token === undefined || refresh_token === undefined) {
+    renderErrorUI("access_token undefined");
+    return false;
+  }
+
+  try {
+    await _supabase.auth.setSession({
+      access_token,
+      refresh_token
+    });
+    return true;
+  } catch (error) {
+    console.error('Error al establecer la sesión:', error);
+    renderErrorUI(error.errorMsg);
+    return false;
+  }
+}
+
+function processMagicLink(url) {
+
+  const params = processQueryString(url);
+
+  changeUIState(States.VERIFYING);
+
+  console.log("params", {params});
+
+  if (params.type = "magiclink") {
+
+    const access_token = params.access_token;
+    const refresh_token = params.refresh_token;
+
+    console.log("access_token", params);
+    console.log("refresh_token", refresh_token);
+
+    isAccountVerified(access_token, refresh_token)
+  .then((status) => {
+    
+    if (status) {
+      changeUIState(States.VERIFIED);
+    } else {
+      changeUIState(States.EXPIRED);
+    }
+  })
+  .catch((error) => {
+    console.error('Error al manejar la promesa:', error);
+    // Realiza acciones adicionales si hay un error al manejar la promesa
+  });
+
+  }
+
+}
+
+
+
+</script>
+</body>
+</html>
