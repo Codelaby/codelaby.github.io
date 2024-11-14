@@ -58,7 +58,7 @@ window.addEventListener('load', function() {
       break;
       case States.SENDED:
         actionResendVerifyEmail();
-        disableElementForSeconds(myButton, 30, translate('sended_resend', language));
+        disableElementForSeconds(myButton, 30, translate('sent_resend', language));
       break;
       case States.VERIFIED:
         actionContinue();
@@ -115,8 +115,8 @@ function renderUIEstado(estado) {
   switch (estado) {
     case States.VERIFYING:
       iconElement.src = 'img/email_verifying.png';
-      titleElement.textContent = translate("verifing_title", language);
-      descriptionElement.textContent = translate("verifing_summary", language);
+      titleElement.textContent = translate("verifying_title", language);
+      descriptionElement.textContent = translate("verifying_summary", language);
       tipElement.textContent = null;
       btnActionElement.style.display = 'none';
       progressElement.style.display = 'block';
@@ -141,10 +141,10 @@ function renderUIEstado(estado) {
       break;
     case States.SENDED:
       iconElement.src = 'img/email_verfiy_sending.png';
-      titleElement.textContent = translate("sended_title", language);
-      descriptionElement.textContent = translate("sended_summary", language);
-      tipElement.textContent = translate("sended_tip", language);
-      btnActionElement.textContent = translate("sended_btn", language);
+      titleElement.textContent = translate("sent_title", language);
+      descriptionElement.textContent = translate("sent_summary", language);
+      tipElement.textContent = translate("sent_tip", language);
+      btnActionElement.textContent = translate("sent_btn", language);
       btnActionElement.style.display = 'block';
       progressElement.style.display = 'none';
       break;
@@ -218,11 +218,7 @@ function processMagicLink(url) {
   });
 
   }
-
 }
-
-
-
 </script>
 </body>
 </html>
