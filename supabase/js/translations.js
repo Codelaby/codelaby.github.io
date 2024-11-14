@@ -2,8 +2,8 @@ var translations = {
     en: {
         error_unexpected_title: "Oops... it looks like an unexpected error occurred",
         error_unexpected_summary: "An exception has been thrown during processing: {{ error_msg }}",
-        verifying_title: "Account Verification",
-        verifying_summary: "Please wait while we verify your email.",
+        verifing_title: "Account Verification",
+        verifing_summary: "Please wait while we verify your email.",
         expired_title: "Couldn't Verify Account",
         expired_summary: "It appears your verification email link has expired.",
         expired_tip: "Not to worry, we can send the link again.",
