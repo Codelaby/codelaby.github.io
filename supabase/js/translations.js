@@ -6,7 +6,7 @@ var translations = {
         verifing_summary: "Please wait while you verify your email.",
         expired_title: "Couldn't veify account",
         expired_summary: "Apparently your verification email link has expired.",
-        expired_tip: "Not to worry, we can sendd the link again.",
+        expired_tip: "Not to worry, we can send the link again.",
         expired_btn: "Resend verification Email",
         expired_resend: "Resend in {{seconds}} second(s)",
         sended_title: "Please verify your email",
@@ -17,7 +17,7 @@ var translations = {
         verified_title: "Account verificated!",
         verified_summary: "You account has been verified. You can continue using the application.",
         verified_tip: "You can continue personalized from your user profile account.",
-        verified_btn: "You Account Profile",
+        verified_btn: "Open the App",
     },
     es: {
       greeting: "¡Hola!",
